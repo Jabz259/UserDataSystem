@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <form action="/users" method="post" class="form-example">
+        
+        
+          <label for="firstName">Enter first name: </label>
+          <input type="text" name="firstName" id="firstName" required />
+        
+          <label for="secondName">Enter surname: </label>
+          <input type="text" name="secondName" id="secondName" required />
+      
+           <label for="age">Enter user age: </label>
+            <input type="number" name="age" id="age" required />
+          
+  
+
+       
+          <input type="submit" value="Add User" />
+        
+      </form>
+      
+
+<br>
+
+<textarea id="data" name="txtArea" rows="100" cols="100"> 
+
+    <% users.forEach(user => { %>
+        <%= `User: ${user.firstName} ${user.secondName} is ${user.age} years old` %>
+    <% }); %>
+
+</textarea>
+    
+</body>
+</html>
